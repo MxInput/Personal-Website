@@ -1,5 +1,10 @@
 ---
+	import { Image } from 'astro:assets';
+	import { Font } from "astro:assets";
 
+	import crop_image from '../images/crop_company_image.png'; 
+	import playdate_image from '../images/playdate_image.png'; 
+	import untoword_image from '../images/untoword_image.png'; 
 ---
 
 <html lang="en">
@@ -9,9 +14,59 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Index | MxInput</title>
+		<Font cssVariable="--font-sumpfdeutschensportschrift-sdin" />
+		<style>
+			h1, h2, h3 {
+				font-family: var(--font-sumpfdeutschensportschrift-sdin);
+			}
+			h1 {
+				color: #276FF5;
+				font-size: 4rem;
+			}
+			h2 {
+				color: #276FF5;
+				font-size: 3rem;
+			}
+			.project {
+				background-color: #fbcc10;
+				border-radius: 8px;
+				padding: 8px;
+				width: 50%;
+				margin: auto;
+				margin-bottom: 50px;
+				text-align: center;
+			}
+
+			.project h3 {
+				color: white;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1>About MxInput</h1>
+
+		<p>Hello! I'm MxInput, I like tinkering with electronics (and sometimes do that more than using them), turn-based RPGs, and crocheting.</p>
+		<p>Currently, I enrolled in school while trying my best to still engage with my hobbies.</p>
+
+		<h2>Some Nice Projects I've Done So Far</h2>
+
+		<div class="project">
+			<Image src={crop_image} width="400" height="200" alt="A description of my image."/>
+			<h3>Crop Company</h3>
+			<p>As of writing, this is the project I've spent the most time on. It's a simple farming game where you plant seeds, then use robots to take care of them.</p>
+		</div>
+		
+		<div class="project">
+			<Image src={playdate_image} width="400" height="200" alt="A description of my image."/>
+			<h3>Mowed the Dog Website</h3>
+			<p>A website displaying the font I made for Typeface YSWS.</p>
+		</div>
+
+		<div class="project">
+			<Image src={untoword_image} width="300" height="150" alt="A description of my image."/>
+			<h3>Untoword</h3>
+			<p>A word game where you try to compete against the clock to make the most words possible and build up a streak.</p>
+		</div>
 	</body>
 </html>
