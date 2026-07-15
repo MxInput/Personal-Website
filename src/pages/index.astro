@@ -16,7 +16,11 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Index | MxInput</title>
 		<Font cssVariable="--font-sumpfdeutschensportschrift-sdin" />
+		<Font cssVariable="--font-SsdSeptentrionis-ovDwd" />
 		<style>
+			body {
+				background-color: #8ecae6;
+			}
 			h1, h2, h3 {
 				font-family: var(--font-sumpfdeutschensportschrift-sdin);
 			}
@@ -26,7 +30,10 @@
 			}
 			h2 {
 				color: #276FF5;
-				font-size: 3rem;
+				font-size: 2rem;
+			}
+			p, a {
+				font-family: var(--font-SsdSeptentrionis-ovDwd);
 			}
 			.project {
 				background-color: #fbcc10;
@@ -39,7 +46,36 @@
 			}
 
 			.project h3 {
-				color: white;
+				color: #e2631e;
+			}
+
+			.project:hover {
+				border: 2px solid white;
+				box-shadow: 2px 2px 10px #172051;
+			}
+
+			img {
+				border: 4px solid #e2631e;
+				border-radius: 10px;
+				transition: transform 0.5s;
+				width: 30vw;
+				height: 35vh;
+			}
+
+			img:hover {
+				transform: scale(1.2) rotate(10deg);
+			}
+
+			a {
+				color: #e2631e;
+			}
+
+			a:visited {
+				color: #d32727;
+			}
+
+			a:hover {
+				color: #2758d3;
 			}
 		</style>
 	</head>
@@ -47,26 +83,29 @@
 		<h1>About MxInput</h1>
 
 		<p>Hello! I'm MxInput, I like tinkering with electronics (and sometimes do that more than using them), turn-based RPGs, and crocheting.</p>
-		<p>Currently, I enrolled in school while trying my best to still engage with my hobbies.</p>
+		<p>Currently, I'm enrolled in school, while trying my best to still engage with my hobbies.</p>
 
-		<h2>Some Nice Projects I've Done So Far</h2>
+		<h2>Some Projects I've Done So Far</h2>
 
 		<div class="project">
-			<Image src={crop_image} width="400" height="200" alt="A description of my image."/>
+			<Image src={crop_image} alt="An image of the game Crop Company."/>
 			<h3>Crop Company</h3>
 			<p>As of writing, this is the project I've spent the most time on. It's a simple farming game where you plant seeds, then use robots to take care of them.</p>
+			<a href="https://github.com/MxInput/Crop-Company">Link</a>
 		</div>
 		
 		<div class="project">
-			<Image src={playdate_image} width="400" height="200" alt="A description of my image."/>
+			<Image src={playdate_image} alt="An image of the website displaying the Mowed the Dog font."/>
 			<h3>Mowed the Dog Website</h3>
 			<p>A website displaying the font I made for Typeface YSWS.</p>
+			<a href="https://github.com/MxInput/Mowed-the-Dog-Website">Link</a>
 		</div>
 
 		<div class="project">
-			<Image src={untoword_image} width="300" height="150" alt="A description of my image."/>
+			<Image src={untoword_image} alt="An image of the website Untoword."/>
 			<h3>Untoword</h3>
 			<p>A word game where you try to compete against the clock to make the most words possible and build up a streak.</p>
+			<a href="https://github.com/MxInput/Untoword">Link</a>
 		</div>
 	</body>
 </html>

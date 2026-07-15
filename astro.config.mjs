@@ -14,5 +14,16 @@ export default defineConfig({
         style: 'normal'
       }]
     }
+  }, {
+    provider: fontProviders.local(),
+    name: "SsdSeptentrionis-ovDwd",
+    cssVariable: "--font-SsdSeptentrionis-ovDwd",
+    options: {
+      variants: [{
+        src: ['./src/assets/fonts/SsdSeptentrionis-ovDwd.ttf'],
+        weight: 'normal',
+        style: 'normal'
+      }]
+    }
   }]
 });
