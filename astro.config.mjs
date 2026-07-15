@@ -3,6 +3,8 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+    site: 'https://mxinput.github.io',
+    base: '/Personal-Website',
     fonts: [{
     provider: fontProviders.local(),
     name: "Sumpfdeutschensportschrift-sdin",
